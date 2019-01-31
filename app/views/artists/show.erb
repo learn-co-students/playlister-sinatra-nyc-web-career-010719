@@ -1,0 +1,18 @@
+Name: <%= @artist.name %> <br>
+
+<br>
+Songs: <% @artist.songs.each do|song| %><br>
+       <a href="/songs/<%= song.slug %>"> <%= song.name %> </a>
+       <% end %>
+<br>
+<br>
+
+Genre: <% @artist.genres.each do|genre| %><br>
+       <a href="/genres/<%= genre.slug %>"> <%= genre.name %> </a>
+       <% end %>
+
+
+<!-- displays the artist's songs (FAILED - 1)
+    displays the artist's genres (FAILED - 2)
+    contains links to each song's show page (FAILED - 3)
+    contains links to each genre's show page (FAILED - 4) -->
