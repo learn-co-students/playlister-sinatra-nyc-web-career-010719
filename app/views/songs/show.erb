@@ -1,0 +1,22 @@
+<!-- <form method="POST" action="/songs/<%=@song.id%>">
+  <input type="hidden" name="_method" value="DELETE" />
+  <input type="submit" value="delete" />
+</form> -->
+
+<h1> <%= @song.name %> </h1>
+
+Artist: <a href="/artists/<%= @song.artist.slug %>"> <%= @song.artist.name %> </a>
+<br>
+<br>
+
+Genres:<br>
+<% @song.genres.each do |genre| %>
+  <a href="/genres/<%= genre.slug %>"><%= genre.name %> </a><br>
+<% end %>
+
+<!--
+responds with a 200 status code
+ displays the song's artist
+ #displays the song's genres (FAILED - 4)
+ #contains links to the artist's show page (FAILED - 5)
+ #contains links to each genre's show page (FAILED - 6) -->
